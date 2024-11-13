@@ -36,7 +36,7 @@ export default async function handler(req, res) {
             console.error('ошибка:', error);
             res.status(500).json({ error: 'Ошибка' });
         } finally {
-            console.log('Мы тут ');
+            console.log('Мы тут groups' );
         }
     } else {
         res.setHeader('Allow', ['GET']);

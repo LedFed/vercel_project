@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div>
       {products.map(e => (
-        <Link href={`/product/${e.code}`}>
+        <Link href={`/product/${e.code}`} prefetch={true}>
 
           <div key={e.id}>{e.name}</div> // Исправлено
         </Link>
