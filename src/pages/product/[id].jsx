@@ -50,7 +50,7 @@ const ProductPage = ({ product }) => {
     return (
         <>
             <div className="container">
-         
+                <div>Working...</div>
                 <Productpages
                     product={product}
                 />
