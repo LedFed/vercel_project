@@ -5,7 +5,7 @@ import Productpages from "../../app/components/Productpages";
 
 export async function getStaticPaths() {
     try {
-        const response = await fetch('http://localhost:3000/api/products'); // замените на ваш путь
+        const response = await fetch(`${API_HOST}/products`); // замените на ваш путь
         const data = await response.json();
         // console.log(data);
         const paths = data.rows.map(product => ({
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     try {
-        const response = await fetch(`http://localhost:3000/api/groups?value=${encodeURIComponent(params.id)}`);// замените на ваш путь
+        const response = await fetch(`${API_HOST}/groups?value=${encodeURIComponent(params.id)}`);// замените на ваш путь
         if (!response.ok) {
             throw new Error(`Ошибка сети: ${response.status} - ${response.statusText}`);
         }
