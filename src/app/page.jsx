@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Category from './components/Category';
 
 export default function Home() {
   const [cart, setCart] = useState([]);
@@ -34,6 +35,7 @@ export default function Home() {
 
   return (
     <div>
+      <Category/>
       {products.map(e => (
         <Link href={`/product/${e.code}`} prefetch={true}>
 

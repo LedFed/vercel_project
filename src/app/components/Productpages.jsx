@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-export default function Productpages({ product }) {
+export default function Productpages({ product, images }) {
   
     const [activeIndex, setActiveIndex] = useState(0);
     const [currentText, setCurrentText] = useState('');
@@ -57,7 +57,7 @@ export default function Productpages({ product }) {
                  
                     <div className="current_carusel">
                      
-
+                        <img src={`../img/${images.rows[0].filename}`} alt="" />
                     </div>
                 </div>
                 <div className="current_card_right">
